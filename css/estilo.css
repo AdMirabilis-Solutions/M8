@@ -1,0 +1,207 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222;
+  background-color: #ffffff;
+}
+
+/* Topo */
+
+.topo {
+  background-color: #b8e3fb;
+  text-align: center;
+  padding: 35px 0 45px;
+}
+
+.logo {
+  width: 90px;
+  margin-bottom: 25px;
+}
+
+.menu a {
+  color: #111;
+  font-size: 14px;
+  margin: 0 12px;
+  text-decoration: underline;
+}
+
+.menu a:hover {
+  color: #1f8ac0;
+}
+
+/* Seções */
+
+.secao {
+  text-align: center;
+  padding: 55px 20px;
+}
+
+.clara {
+  background-color: #ffffff;
+}
+
+.azul {
+  background-color: #1f88c1;
+  color: #ffffff;
+}
+
+.banner {
+  display: block;
+  width: 850px;
+  max-width: 100%;
+  margin: 0 auto 45px;
+}
+
+.imagem-destaque {
+  display: block;
+  width: 370px;
+  max-width: 100%;
+  margin: 25px auto 35px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+h2 {
+  margin: 5px 0 20px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #1f8ac0;
+}
+
+h3 {
+  margin: 0 0 30px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+p {
+  width: 800px;
+  max-width: 100%;
+  margin: 25px auto;
+  font-size: 15px;
+  line-height: 28px;
+  text-align: justify;
+}
+
+span {
+  color: #1f8ac0;
+  font-weight: bold;
+}
+
+.azul p {
+  width: 620px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 36px;
+}
+
+.azul strong {
+  color: yellow;
+}
+
+/* Lista */
+
+ul {
+  display: inline-block;
+  margin: 35px auto;
+  padding-left: 22px;
+  text-align: left;
+  font-size: 18px;
+  line-height: 34px;
+}
+
+/* Botão voltar */
+
+.botao-topo {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #1f8ac0;
+  color: #ffffff;
+  border-radius: 3px;
+  font-size: 13px;
+  text-decoration: underline;
+}
+
+.botao-topo.claro {
+  background-color: #ffffff;
+  color: #1f8ac0;
+}
+
+/* Contato */
+
+.mapa {
+  width: 250px;
+  height: 120px;
+  margin: 0 auto 30px;
+  border: 2px solid #9ec4d8;
+}
+
+.texto-contato {
+  width: fit-content;
+  max-width: 90%;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px;
+  text-align: center;
+  line-height: 24px;
+}
+
+.enderecos {
+  margin: 35px 0;
+}
+
+.enderecos a {
+  display: block;
+  width: fit-content;
+  margin: 12px auto;
+  padding: 5px 10px;
+  background-color: #ffffff;
+  color: #1f8ac0;
+  border-radius: 4px;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+/* Responsividade básica */
+
+@media (max-width: 768px) {
+  .topo {
+    padding: 25px 10px 35px;
+  }
+
+  .menu a {
+    display: inline-block;
+    margin: 6px 8px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  p,
+  .azul p {
+    width: 100%;
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .banner {
+    margin-bottom: 35px;
+  }
+}
