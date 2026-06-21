@@ -21,6 +21,12 @@
         class="logo"
       />
 
+      <button class="botao-hamburguer" id="botao-hamburguer" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-mobile">
+        <span class="linha"></span>
+        <span class="linha"></span>
+        <span class="linha"></span>
+      </button>
+
       <nav class="menu">
         <a href="#sobre">Sobre</a>
         <a href="#servicos">Serviços</a>
@@ -28,6 +34,17 @@
         <a href="#contato">Contato</a>
       </nav>
     </header>
+
+    <!-- Menu mobile / overlay -->
+    <div class="menu-overlay" id="menu-overlay"></div>
+
+    <nav class="menu-mobile" id="menu-mobile">
+      <button class="botao-fechar" id="botao-fechar" aria-label="Fechar menu">&times;</button>
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#corretores">Corretores</a>
+      <a href="#contato">Contato</a>
+    </nav>
 
     <main>
       <!-- Sobre -->
@@ -117,5 +134,40 @@
         <a href="#topo" class="botao-topo claro">Voltar ao topo</a>
       </section>
     </main>
+
+    <script>
+      const botaoHamburguer = document.getElementById("botao-hamburguer");
+      const botaoFechar = document.getElementById("botao-fechar");
+      const menuMobile = document.getElementById("menu-mobile");
+      const overlay = document.getElementById("menu-overlay");
+
+      function abrirMenu() {
+        menuMobile.classList.add("aberto");
+        overlay.classList.add("ativo");
+        botaoHamburguer.setAttribute("aria-expanded", "true");
+        document.body.style.overflow = "hidden";
+      }
+
+      function fecharMenu() {
+        menuMobile.classList.remove("aberto");
+        overlay.classList.remove("ativo");
+        botaoHamburguer.setAttribute("aria-expanded", "false");
+        document.body.style.overflow = "";
+      }
+
+      botaoHamburguer.addEventListener("click", abrirMenu);
+      botaoFechar.addEventListener("click", fecharMenu);
+      overlay.addEventListener("click", fecharMenu);
+
+      menuMobile.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", fecharMenu);
+      });
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && menuMobile.classList.contains("aberto")) {
+          fecharMenu();
+        }
+      });
+    </script>
   </body>
 </html>
